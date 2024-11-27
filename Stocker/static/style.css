@@ -1,0 +1,95 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.CqC5yHxR3YvPJ-jtI2GDkgHaEK%26pid%3DApi&f=1&ipt=f9a2a6e62e45114a596ae3c1461f06afc81fe5c243133dbf184705625e0b6066&ipo=images");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: inherit;
+  background-size: cover;
+  background-position: center;
+  filter: blur(10px); 
+  z-index: 0;
+}
+
+.container {
+  max-width: 400px; 
+  margin: 50px auto; 
+  background: rgba(255, 255, 255, 0.9); 
+  padding: 20px;  
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;  
+  z-index: 1; /* Ensure container is above the blurred background */
+  position: relative; /* Allow content inside to stack correctly */
+  box-sizing: border-box; /* Include padding in the element's width/height */
+}
+
+h1, h2 {
+  text-align: center;
+  color: #333;  
+}
+
+input, select, button {
+  display: block;
+  width: 100%;
+  margin: 12px 0;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+input, button {
+  box-sizing: border-box;  
+}
+
+input:focus, select:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.25);
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+  .container {
+    margin: 20px;
+    padding: 15px;
+  }
+
+  h1, h2 {
+    font-size: 1.5em;
+  }
+}
