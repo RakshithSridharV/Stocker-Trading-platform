@@ -1,1 +1,0 @@
-# Stocker-Trading-platform
